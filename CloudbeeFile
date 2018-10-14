@@ -1,3 +1,34 @@
 https://docs.huihoo.com/jenkins/enterprise/14/user-guide-docs/backup.html
 https://hub.docker.com/r/cloudbees/jenkins-enterprise/
 https://prometheus.io/download/
+
+https://github.com/tektutor/maven-hello-project
+
+
+
+
+service jenkins stop/start/status
+
+netstat -ntlp
+
+java -jar ./jenkins.war
+
+
+mvn archetype:generate 
+
+
+netstat -ntli | grep 8080
+
+docker rm -f $(docker ps -aq)
+
+
+docker run --name jenkins -p 8080:8080 -p 50000:50000 -v /root cloudbees/jenkins-enterprise
+
+01d7bc63536e428e83fb6d2a673d10e6
+
+docker run  -p 8080:8080 -p 50000:50000 -v /var/jenkins_home cloudbees/jenkins-enterprise
+
+
+docker run -d --name cloudbees-master-2 -p 8082:8080 -p 50002:50000 -v cbs_home:/var/jenkins_home docker.io/cloudbees/jenkins-enterprise
+
+docker run -d --name cloudbees-master-3 -p 8083:8080 -p 50003:50000 -v cbs_home:/var/jenkins_home docker.io/cloudbees/jenkins-enterprise
